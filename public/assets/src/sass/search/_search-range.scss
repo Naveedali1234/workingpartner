@@ -1,0 +1,161 @@
+.an-range-slider {
+  position: relative;
+  width: 100%;
+  padding-top: $padding-medium;
+
+  &.alter {
+    .ui-widget.ui-widget-content {
+      background: $font-color-light;
+    }
+    .range-value {
+      position: relative;
+      width: 100%;
+      padding: $padding-base 0;
+      padding-bottom: 0;
+      font-size: $font-size-base;
+      @extend .text-center;
+
+      &.price {
+        @include flex-center();
+        div {
+          position: relative;
+          @include display(flex);
+          @include flex-direction(column);
+          padding: 2px $padding-base 0;
+          input {
+            max-width: 80px;
+          }
+
+          &:first-child {
+            &:before {
+              content: "";
+              position: absolute;
+              right: 0;
+              width: 1px;
+              height: 33px;
+              background: $font-color-lighter;
+            }
+            text-align: right;
+          }
+          &:last-child {
+            text-align: left;
+            input {
+              text-align: left;
+            }
+          }
+        }
+
+      }
+
+      input {
+        background: transparent;
+        max-width: 40px;
+        height: 20px;
+        @extend .text-right;
+        color: $font-color-base;
+        border: 0;
+      }
+      label {
+        color: $color-accents;
+        margin: 0;
+        line-height: $font-size-base;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    padding-bottom: $padding-base * 4;
+  }
+
+  .ui-widget.ui-widget-content {
+    border: 0;
+    background: $color-content-bg;
+    &.ui-slider-horizontal {
+      height: 2px;
+    }
+    .ui-slider-range {
+      background: $color-accents;
+    }
+
+    .ui-slider-handle.ui-corner-all.ui-state-default {
+      @include border-radius(50%);
+      border: 0;
+      background: $color-accents;
+      top: -7px;
+
+      &.ui-state-focus {
+        outline: 0;
+      }
+    }
+  }
+
+
+  .slider-title {
+    position: absolute;
+    top: -25px;
+    left: -2px;
+    font-size: $font-size-small - 1;
+    font-weight: $font-weight-bold;
+    color: $font-color-lighter;
+    font-family: $font-family-primary;
+  }
+
+  #slider-radius {
+
+    .slider-title {
+      left: -10px;
+    }
+  }
+
+
+
+  // Slider range bottom value small box
+  .value {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin: 0 0 0 -25px;
+    text-align: center;
+    display: block;
+    width: 50px;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-small - 2;
+    color: #fff;
+    background: $color-accents;
+    @include border-radius($border-radius);
+    line-height: 20px;
+    font-family: $font-family-primary;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 18px;
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid $color-accents;
+    }
+  }
+
+  .price-range-both.value {
+    width: 80px;
+    margin: 0 0 0 -40px;
+    top: 23px;
+
+    &:after {
+      left: 35px;
+    }
+  }
+
+  .price-range-both {
+    display: none;
+  }
+
+  .value i {
+    font-style: normal;
+  }
+
+}
+

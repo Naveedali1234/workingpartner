@@ -1,0 +1,222 @@
+.an-header-banner {
+  position: relative;
+  width: 100%;
+  height: $home-banner-height;
+  //padding: $padding-base * 3;
+
+  &.with-demo {
+    padding: 0;
+    height: 600px;
+
+    .home-banner-content {
+      height: 600px;
+
+      p {
+        max-width: 768px;
+        color: $font-color-white;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &.height-600 {
+    height: 600px;
+  }
+
+  &.with-slider {
+    .home-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      @media (max-width: $screen-md) {
+        position: relative;
+        height: 500px;
+      }
+    }
+    .home-banner-content {
+      position: relative;
+      width: 100%;
+      height: $home-banner-height;
+
+      @media (max-width: $screen-md) {
+        height: 500px;
+      }
+    }
+  }
+
+
+  &.with-map,
+  &.with-slider {
+    @include display(flex);
+    @include align-items(flex-end);
+
+    @media (max-width: $screen-md) {
+      @include flex-direction(column);
+      padding: 0;
+      padding-bottom: $padding-base * 3;
+      height: auto;
+
+      .container {
+        width: 100%;
+        padding-top: $padding-base * 3;
+      }
+    }
+
+  }
+}
+
+.an-inner-banner {
+  position: relative;
+  padding: $padding-large * 4 0;
+  background: $color-content-bg;
+
+  .an-title-container {
+    flex-direction: column;
+    @include flex-center;
+
+    &.left {
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+    }
+  }
+
+  &.has-bg {
+    .overlay {
+      @include overlay();
+      background: rgba($black, .7);
+    }
+
+    .an-title {
+      color: $font-color-white;
+      font-size: $font-size-h1 + 5;
+      padding-bottom: $padding-small;
+    }
+    .container {
+      position: relative;
+      z-index: 20;
+    }
+    .an-agency-single {
+      box-shadow: none;
+    }
+    .an-agent-single.an-agency-single {
+      box-shadow: none;
+
+      .name {
+        .an-title-container {
+          a {
+            color: $font-color-white;
+          }
+        }
+      }
+
+      .listing-meta {
+        span {
+          color: $font-color-extra-light;
+        }
+      }
+    }
+
+  }
+  &.center {
+    .container {
+      @include flex-center();
+    }
+  }
+
+  .an-advertise {
+    padding: 0;
+    background: transparent;
+    margin: 0 auto;
+  }
+
+  .an-title-container {
+    padding-bottom: 0;
+    &.center {
+      @include justify-content(center);
+    }
+  }
+
+  .an-category-list-link {
+    padding-top: $padding-medium;
+  }
+
+
+
+  .an-agent-single.an-agency-single {
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    .an-title {
+      font-weight: $font-weight-regular;
+      text-transform: capitalize;
+    }
+    .left {
+      border: 0;
+      padding: 0;
+    }
+    .name {
+      .an-title-container {
+        padding-bottom: $padding-small;
+        a {
+          color: $font-color-base;
+        }
+      }
+    }
+    .left {
+      .image {
+        margin-top: 0;
+        overflow: visible;
+
+        .edit-btn {
+          color: $color-primary;
+          position: absolute;
+          right: -50px;
+          font-weight: $font-weight-bold;
+          i {
+            padding-right: $padding-5;
+            font-size: $font-size-base;
+            position: relative;
+            top: 2px;
+          }
+
+        }
+      }
+    }
+    .listing-count {
+      position: relative;
+      a {
+        margin: $margin-5;
+      }
+    }
+
+    .listing-meta {
+      border: 2px solid $font-color-extra-light;
+      //background: rgba($black, .5);
+      display: inline-block;
+      border-radius: $btn-border-radius;
+      padding: $padding-small $padding-large;
+      span {
+        color: $font-color-lighter;
+        &:last-child {
+          margin-right: 0;
+
+        }
+      }
+
+    }
+  }
+  .listing-meta {
+    span {
+      color: $font-color-lighter;
+      a {
+        &.color-hotel {
+          color: $color-category-hotels;
+        }
+      }
+    }
+  }
+}

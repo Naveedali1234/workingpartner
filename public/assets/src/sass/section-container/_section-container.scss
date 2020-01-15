@@ -1,0 +1,42 @@
+.an-section-container {
+  position: relative;
+  padding: $padding-large * 2 0 $padding-large + 10;
+  width: 100%;
+  background: $color-content-bg-white;
+
+  &.no-top-padding {
+    padding-top: 0;
+  }
+
+  &.no-bottom-padding {
+    padding-bottom: 0;
+  }
+
+  &.no-padding {
+    padding: 0;
+  }
+
+  &.pt-15 {
+    padding-top: $padding-base;
+  }
+
+  &.bg-gray {
+    background: $color-content-bg;
+  }
+
+  .overlay {
+    @include overlay();
+    background: rgba($black, .8);
+  }
+
+  &.has-bg {
+    background-attachment: fixed !important;
+    .container {
+      position: relative;
+      z-index: 20;
+    }
+  }
+
+
+
+}

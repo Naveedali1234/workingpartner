@@ -1,0 +1,230 @@
+.an-search-container {
+  position: relative;
+  width: 100%;
+  @include border-radius($border-radius);
+  Background: $color-content-bg-white;
+  @include an-box-shadow();
+  z-index: 20;
+
+  &.dark {
+    background: rgba($color-secondary-dark, .8);
+    .slider-title {
+      color: $font-color-white;
+    }
+  }
+  &.primary {
+    background: rgba($color-primary, .5);
+    .slider-title {
+      color: $font-color-white;
+    }
+  }
+
+  input,
+  .an-default-select-wrapper {
+    margin-bottom: $margin-medium;
+  }
+
+  form {
+    position: relative;
+    width: 100%;
+    @include display(flex);
+    @include align-items(stretch);
+  }
+
+  .an-tab-container {
+    .tab-content {
+      padding: 0;
+      padding-bottom: $padding-small;
+      .an-range-slider {
+        input {
+          margin: 0;
+          color: $font-color-base;
+        }
+        .range-value.price {
+          padding-top: $padding-small;
+        }
+      }
+      .rent-pane {
+        .search-fields {
+          padding-bottom: $padding-5 + 2;
+        }
+      }
+    }
+    .tab-nav {
+      margin: 0;
+      .nav-tabs {
+        width: 100%;
+        border-bottom: 1px solid $color-content-bg;
+        li {
+          margin-left: 0;
+          width: 50%;
+          margin: 0;
+
+          &:first-child {
+            a {
+              border-top-left-radius: $border-radius;
+            }
+          }
+          &:last-child {
+            a {
+              border-top-right-radius: $border-radius;
+            }
+          }
+
+          a {
+            border-radius: 0;
+            padding: $padding-base - 2 $padding-base;
+            margin: 0;
+            font-weight: $font-weight-medium;
+            color: $font-color-base;
+            font-size: $font-size-h3;
+
+            &:hover {
+              //background: rgba($color-primary, .2);
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+
+}
+
+
+.an-listing-search-content {
+  height: 100%;
+  overflow: auto;
+
+  .an-search-container {
+    margin-bottom: $margin-medium;
+  }
+
+  &.no-overflow {
+    overflow: visible;
+  }
+
+  &.radius {
+    .an-search-container {
+      @include border-radius($border-radius);
+      @include an-box-shadow();
+    }
+    .search-submit .an-btn {
+      border-radius: 0 $border-radius $border-radius 0;
+    }
+    .show-more-btn {
+      border-bottom-left-radius: $border-radius;
+    }
+  }
+  .an-search-container {
+    @include border-radius(0);
+    box-shadow: none;
+    background: $color-content-bg-white;
+    @include an-box-shadow();
+  }
+  .search-fields {
+    padding-bottom: $padding-base;
+    width: 90%;
+  }
+  .search-submit {
+    width: 10%;
+  }
+
+  .search-submit .an-btn {
+    border-radius: 0;
+  }
+
+  h4 {
+    margin: 0;
+    @extend .an-small-title;
+    color: $font-color-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    @extend .text-left;
+  }
+
+  .range-value {
+    input {
+      margin-bottom: $margin-small;
+      color: $font-color-base !important;
+    }
+  }
+
+  .an-range-slider {
+    @media (max-width: $screen-sm) {
+      padding-bottom: 0;
+    }
+  }
+
+  .search-single {
+    @media (max-width: $screen-sm) {
+      padding-bottom: $padding-base;
+    }
+  }
+
+
+}
+
+.an-search-show-more {
+  position: relative;
+  @extend .text-center;
+
+  .show-content {
+    position: relative;
+    display: none;
+    &.active {
+      padding: $padding-large 0;
+      padding-top: 0;
+      display: block;
+    }
+
+  }
+
+
+
+
+}
+
+.show-more-btn {
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  margin-left: -18px;
+
+  a {
+    background: $color-content-bg-white;
+    margin: 0 auto;
+    margin-bottom: 0;
+    color: $font-color-base;
+    @include circle-icon-link();
+    @include an-box-shadow();
+    @include flex-center;
+    border: 0;
+    color: $font-color-white;
+    background: $color-primary;
+
+    &:hover {
+      color: $font-color-white;
+      background: $color-primary;
+      transform: scale(1.05);
+    }
+
+    .fa-angle-down {
+      display: inline-block;
+    }
+    .fa-angle-up {
+      display: none;
+    }
+    &.active {
+      background: $color-primary;
+      color: $font-color-white;
+      .fa-angle-down {
+        display: none;
+      }
+      .fa-angle-up {
+        display: inline-block;
+      }
+    }
+  }
+}

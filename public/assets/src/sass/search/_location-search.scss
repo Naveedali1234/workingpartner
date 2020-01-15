@@ -1,0 +1,22 @@
+.an-location-search-field {
+  position: relative;
+  width: 100%;
+  margin-bottom: $padding-base * 3;
+
+  .an-default-select-wrapper {
+    @media (max-width: $screen-sm) {
+      margin-bottom: $margin-medium;
+    }
+  }
+
+  .submit-btn {
+    @extend .text-right;
+
+    .an-btn {
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+
+}

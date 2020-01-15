@@ -1,0 +1,65 @@
+.an-blog-container {
+  position: relative;
+  with: 100%;
+}
+
+.an-blog-single {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-bottom: $margin-large;
+  padding: $padding-medium;
+  @include border-radius($border-radius);
+  overflow: hidden;
+  @include transition();
+  @include an-box-shadow();
+
+  &:hover {
+    .overlay {
+      background: rgba($color-secondary, .8);
+    }
+    .an-badge {
+      background: $color-primary;
+      color: $font-color-white;
+    }
+    .content {
+      padding-bottom: $padding-5;
+    }
+
+  }
+
+  .overlay {
+    @include overlay();
+    background: rgba($black, .6);
+  }
+
+  .an-badge {
+    position: absolute;
+    z-index: 20;
+    height: 20px;
+    line-height: 17px;
+  }
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    @include transition();
+
+    h3 {
+      margin: 0;
+      font-size: $font-size-h2;
+      a {
+        color: $font-color-white;
+      }
+    }
+    .listing-meta {
+      color: $font-color-white;
+    }
+
+
+  }
+}

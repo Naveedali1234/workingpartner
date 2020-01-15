@@ -1,0 +1,86 @@
+.an-advertise {
+  position: relative;
+  padding: $padding-base * 2;
+  margin: $margin-base 0 $margin-base * 2;
+  background: $color-content-bg;
+  @include border-radius($border-radius);
+
+  .ad-details {
+    position: relative;
+    //padding-left: $padding-base * 3 + 10;
+    > i {
+      position: absolute;
+      left: 0;
+      top: $padding-small - 5;
+      @include circle-icon-link-dark;
+      width: $category-icon-width;
+      height: $category-icon-width;
+      line-height: $category-icon-width;
+      font-size: $font-size-h3;
+
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: $font-weight-regular;
+      padding-bottom: $padding-small;
+      a {
+        color: $font-color-base;
+      }
+    }
+
+    h3 {
+      font-family: $font-family-quote;
+      margin: 0;
+      font-weight: $font-weight-regular;
+      padding-top: $padding-small - 5;
+    }
+
+    .listing-meta {
+      padding-top: 0;
+      color: $font-color-light;
+      a {
+        color: $font-color-light;
+      }
+    }
+  }
+
+  .ad-price {
+    position: relative;
+    text-align: right;
+    padding-top: $padding-base;
+
+    @media (max-width: $screen-sm) {
+      text-align: left;
+      padding-top: $padding-base * 2;
+      padding-left: $padding-large * 2;
+    }
+
+    h1 {
+      font-weight: $font-weight-regular;
+      color: $color-primary;
+      margin: 0;
+      small {
+        font-size: $font-size-small;
+        position: relative;
+        top: -10px;
+        color: $color-primary;
+      }
+    }
+    .listing-meta {
+      span {
+        margin: 0;
+        a {
+          font-weight: $font-weight-bold;
+          margin-left: $margin-small - 5;
+          color: $font-color-light;
+          &.active,
+          &:hover {
+            color: $color-accents;
+          }
+
+        }
+      }
+    }
+  }
+}

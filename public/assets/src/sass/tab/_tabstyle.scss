@@ -1,0 +1,55 @@
+.an-tab-container {
+  position: relative;
+
+  .tab-content {
+    position: relative;
+    padding: $padding-base 0;
+  }
+
+  .tab-nav {
+    position: relative;
+    @include flex-space-between();
+    margin-bottom: $margin-base * 2;
+
+    h3 {
+      margin: 0;
+      font-family: $font-family-quote;
+      font-weight: $font-weight-regular;
+
+      @media (max-width: $screen-xs) {
+        margin-bottom: $margin-medium;
+      }
+    }
+    .nav-tabs {
+      border: 0;
+
+      li {
+        margin-left: $margin-5;
+        @media (max-width: $screen-xs) {
+          margin-bottom: $margin-small;
+        }
+        &.active {
+          a {
+            background: $color-primary;
+            color: $font-color-white;
+
+            &:hover {
+              background: $color-primary;
+              color: $font-color-white;
+            }
+          }
+        }
+        a {
+          border: 0;
+          @include border-radius($border-radius);
+          padding: $padding-5 + 1 $padding-base;
+          font-family: $font-family-secondary;
+          &:hover {
+            background: $color-content-bg;
+          }
+        }
+      }
+    }
+  }
+}
+

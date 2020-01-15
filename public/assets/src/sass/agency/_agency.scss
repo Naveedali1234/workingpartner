@@ -1,0 +1,221 @@
+.an-agencies {
+  position: relative;
+  width: 100%;
+  padding-top: $padding-base * 2;
+}
+
+.an-agency-single {
+  position: relative;
+  margin-bottom: $margin-base * 5;
+  //@include border($font-color-extra-light);
+  @include border-radius($border-radius);
+  @include display(flex);
+  @include flex-wrap(wrap);
+  //@include an-box-shadow();
+
+  &:last-child {
+    margin-bottom: $margin-base;
+  }
+
+  &.an-agent-single {
+    margin-bottom: $margin-base * 6;
+    &:hover {
+      .left {
+        .image {
+          .overlay {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+    .left {
+      width: 100%;
+      @include border($font-color-extra-light);
+      @include border-radius($border-radius);
+      .image {
+        margin-top: -47px;
+        margin-bottom: $margin-base * 2;
+        top: 0;
+        overflow: hidden;
+
+        .overlay {
+          @include overlay();
+          @include flex-center();
+          @include transition();
+          @include border-radius(50%);
+
+          visibility: hidden;
+          opacity: 0;
+
+          a {
+            @include circle-icon-link-white;
+            margin: 3px;
+            font-size: $font-size-h3;
+            &.message {
+              &:hover {
+                background: $color-content-bg-white;
+              }
+            }
+
+            &.link {
+              @include circle-icon-link-dark;
+              background: $color-primary;
+              border-color: $color-primary;
+              &:hover {
+                background: darken($color-primary, 5%);
+                border-color: darken($color-primary, 5%);
+                color: $font-color-white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .name {
+      flex-direction: column;
+      padding-bottom: $padding-base;
+      h3 {
+        font-size: $font-size-h3 + 2;
+        span {
+          color: $color-primary;
+          font-size: $font-size-small - 2;
+          position: relative;
+          padding-left: $padding-5;
+          top: -5px;
+        }
+      }
+      ul {
+        padding-left: 0;
+        li {
+          a {
+            i {
+              padding-right: $padding-5;
+            }
+          }
+        }
+      }
+    }
+    .listing-meta {
+      padding-bottom: $padding-small;
+    }
+
+    .listing-count {
+      position: relative;
+      width: 100%;
+      padding-top: $padding-small;
+      text-align: center;
+    }
+  }
+
+  .left {
+    position: relative;
+    width: 20%;
+    padding: $padding-base * 2;
+    padding-top: 0;
+    text-align: center;
+
+    @media(max-width: $screen-md) {
+      width: 25%;
+    }
+
+    @media(max-width: $screen-md) {
+      width: 30%;
+    }
+
+    @media(max-width: 580px) {
+      width: 100%;
+    }
+
+    a.an-btn {
+      padding-left: $padding-medium;
+      padding-right: $padding-medium;
+    }
+  }
+  .right {
+    position: relative;
+    width: 80%;
+    padding: $padding-base * 2;
+    padding-left: 0;
+
+    @media(max-width: $screen-md) {
+      width: 75%;
+    }
+
+    @media(max-width: $screen-md) {
+      width: 70%;
+    }
+    @media(max-width: 580px) {
+      width: 100%;
+      padding-left: $padding-large;
+      padding-top: 0;
+    }
+  }
+
+  .name {
+    display: flex;
+
+    h3 {
+      margin: 0;
+      a {
+        color: $font-color-base;
+      }
+    }
+    ul {
+      padding-left: $padding-medium;
+      margin: 0;
+    }
+  }
+  .image {
+    position: relative;
+    top: -45px;
+    width: 90px;
+    height: 90px;
+    @include an-box-shadow();
+    @include border-radius(50%);
+    margin: 0 auto;
+  }
+
+  .social-link {
+    margin: 0;
+    padding-top: $padding-base;
+    li {
+      a {
+        color: $font-color-extra-light;
+        font-size: $font-size-base ;
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+
+
+  p {
+    margin: 0;
+    padding-top: $padding-small;
+    color: $font-color-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+  }
+
+  .an-link-icon-btn {
+    position: absolute;
+    right: 40px;
+    top: -20px;
+  }
+}
+
+.an-link-icon-btn {
+  @include circle-icon-link;
+  border-width: 2px;
+  font-size: $font-size-h2;
+  color: $color-primary;
+  border-color: $color-primary;
+  background: $color-content-bg-white;
+  &:hover {
+    color: $font-color-white;
+    background: $color-primary;
+  }
+}

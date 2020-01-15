@@ -1,0 +1,26 @@
+.an-works-single {
+  position: relative;
+  width: 100%;
+  margin-bottom: $margin-large;
+  padding: $padding-large $padding-medium;
+  background: $color-content-bg-white;
+  @include border($font-color-extra-light);
+  @include border-radius($border-radius);
+  @extend .text-center;
+
+  h2 {
+    @extend .text-uppercase;
+    padding-bottom: $padding-small;
+    padding-top: $padding-5;
+  }
+
+  i {
+    color: $color-primary;
+    font-size: $font-size-h1 * 1.5;
+  }
+
+  p {
+    margin: 0;
+    font-size: $font-size-base;
+  }
+}

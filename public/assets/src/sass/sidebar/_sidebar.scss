@@ -1,0 +1,17 @@
+.an-sidebar {
+  position: relative;
+  width: 100%;
+  //@include an-box-shadow();
+  @include border($font-color-extra-light);
+  @include border-radius($border-radius);
+
+  margin-bottom: $margin-base * 4;
+
+  > .an-small-title {
+    padding: 0 $padding-medium;
+    @extend .text-uppercase;
+  }
+  .an-news-container {
+    padding: 0 $padding-medium $padding-large;
+  }
+}

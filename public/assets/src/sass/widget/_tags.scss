@@ -1,0 +1,14 @@
+.an-tags {
+  position: relative;
+  width: 100%;
+  margin-bottom: $margin-large;
+
+  .tag-link {
+    @include border-radius($border-radius);
+    @include border($font-color-extra-light);
+    padding: $padding-5 - 2 $padding-base;
+    margin-right: $padding-5;
+    margin-bottom: $padding-small - 2;
+    @include display(inline-block);
+  }
+}

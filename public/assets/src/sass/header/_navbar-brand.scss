@@ -1,0 +1,19 @@
+@mixin navbar-brand() {
+  padding: 0 $padding-base;
+  display: block;
+  font-size: $font-size-h2;
+  color: $font-color-base;
+  font-family: $font-family-secondary;
+  top: 7px;
+  position: relative;
+
+
+  img {
+    width: $logo-width;
+    display: inline-block;
+
+    @media (max-width: $screen-lg) {
+      width: $logo-width - 10;
+    }
+  }
+}

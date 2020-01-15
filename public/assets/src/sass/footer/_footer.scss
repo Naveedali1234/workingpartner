@@ -1,0 +1,27 @@
+.an-footer {
+  position: relative;
+  padding: $padding-base * 4 0 0;
+  border-top: 2px solid $color-accents;
+  background: darken($color-secondary, 5%);
+
+}
+
+.an-footer-copyright {
+  position: relative;
+  background: $color-secondary-dark;
+  padding: $padding-base 0;
+  .content {
+    width: 100%;
+    @include flex-space-between;
+  }
+  p {
+    margin: 0;
+
+    @media (max-width: $screen-xs) {
+      margin-bottom: $margin-medium;
+    }
+  }
+  ul {
+    margin: 0;
+  }
+}

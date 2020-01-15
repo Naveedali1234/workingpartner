@@ -1,0 +1,23 @@
+/*  @import plugin files
+ *   Bootstrap
+ *   Ionicons
+ */
+@import 'bootstrap';
+@import './vendors/ionicons/ionicons';
+@import './vendors/typeicon/typicons';
+
+// Selectize style
+@import './vendors/selectize/selectize';
+@import './vendors/jquery-ui/jquery-ui.min';
+
+// owl carousel
+@import './vendors/owl-carousel/owl.carousel';
+@import './vendors/owl-carousel/owl.theme.default';
+
+@import './vendors/fileinput/fileinput';
+
+// Fontawedome
+@import './vendors/fontawesome/font-awesome';
+
+// date reangle picker
+@import './vendors/bs-daterangepicker/daterangepicker';

@@ -1,0 +1,19 @@
+.widget-opening-hours {
+  position: relative;
+  padding: $padding-large;
+  background: $color-accents;
+  margin-bottom: $margin-large;
+
+  h4 {
+    @extend .text-uppercase;
+    color: lighten($color-accents, 25%);
+    margin: 0;
+    padding-bottom: $padding-base;
+    font-size: $font-size-base;
+  }
+  .hours-list-single {
+    color: $font-color-white;
+    @include flex-space-between;
+    font-size: $font-size-small;
+  }
+}

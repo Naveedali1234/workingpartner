@@ -1,0 +1,51 @@
+.an-sidebar-search {
+  position: relative;
+  width: 100%;
+  background: $color-content-bg-white;
+  @include an-box-shadow();
+
+  h4 {
+    margin: 0;
+    @extend .an-small-title;
+    font-size: $font-size-base;
+    padding-bottom: $padding-base;
+
+    &.no-padding {
+      padding-bottom: 0;
+    }
+  }
+
+  .search-submit {
+    width: 100%;
+    height: 100px;
+
+    button {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+  }
+
+  .search-single {
+    position: relative;
+    padding: $padding-base $padding-base * 2;
+  }
+
+  .reset-filter {
+    position: relative;
+    padding: $padding-medium 0 $padding-large;
+    @extend .text-center;
+    a {
+      display: block;
+      color: $color-primary;
+      i {
+        display: block;
+        font-size: $font-size-base + 2;
+      }
+
+      &:hover {
+        color: darken($color-primary, 5%);
+      }
+    }
+  }
+}

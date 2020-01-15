@@ -1,0 +1,60 @@
+.an-footer-bottom {
+  position: relative;
+  padding-bottom: $padding-medium;
+}
+
+.an-widget {
+  position: relative;
+  padding-bottom: $padding-base * 2;
+
+  ul {
+    @extend .list-unstyled;
+    li {
+      position: relative;
+      //border-bottom: 1px solid $font-color-base;
+      &:before {
+        content: "\f105";
+        font-family: 'Fontawesome';
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+      a {
+        padding: $padding-5 $padding-base;
+        display: block;
+        color: $font-color-white;
+        opacity: .7;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.newsletter {
+    .an-small-title {
+      margin-bottom: $margin-base + 10;
+    }
+
+    input {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    width: $logo-width;
+    margin-bottom: $margin-base * 3 - 5;
+  }
+  .copyrights {
+    color: lighten($color-secondary, 15%);
+    line-height: $line-height-h4;
+  }
+
+  p {
+    color: $font-color-white;
+    margin-bottom: $margin-large;
+    line-height: $line-height-h4;
+    opacity: .7;
+  }
+}

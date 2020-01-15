@@ -1,0 +1,38 @@
+.an-classified-listing {
+  position: relative;
+  width: 100%;
+}
+.classified-single {
+  position: relative;
+  margin-bottom: $margin-large;
+  @include an-box-shadow();
+
+  h3 {
+    margin: 0;
+    padding: $padding-base $padding-base;
+    color: $font-color-white;
+    border-radius: $border-radius $border-radius 0 0;
+
+    i {
+      padding-right: $padding-small;
+      @include transition();
+    }
+  }
+
+  ul {
+    padding: $padding-small;
+    li {
+      padding: $padding-5;
+      a {
+        width: 100%;
+        font-weight: $font-weight-semibold;
+        @include flex-space-between;
+        @include transition();
+        &:hover {
+          padding-left: $padding-5;
+        }
+      }
+    }
+  }
+
+}

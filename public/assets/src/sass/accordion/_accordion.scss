@@ -1,0 +1,40 @@
+.an-accordion {
+  position: relative;
+  width: 100%;
+
+  .panel-group .panel {
+    border-color: $font-color-extra-light;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .panel-group .panel-heading + .panel-collapse > .panel-body,
+  .panel-group .panel-heading + .panel-collapse > .list-group {
+    border-top: 0;
+  }
+  .panel-heading {
+    border: 0;
+    padding: 0;
+    background: $color-content-bg;
+    @include border-radius($border-radius);
+
+    h4 {
+      a {
+        padding: $padding-base;
+        display: block;
+        background: $color-primary;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-base;
+        color: $font-color-white;
+        @include border-radius($border-radius);
+
+        &.collapsed {
+          background: $color-content-bg;
+          color: $font-color-base;
+          border: 0;
+          @include border-radius($border-radius);
+        }
+      }
+    }
+  }
+}

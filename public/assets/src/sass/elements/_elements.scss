@@ -1,0 +1,26 @@
+.element-single {
+  position: relative;
+  width: 100%;
+  margin-bottom: $margin-medium * 2;
+
+  button {
+    margin-right: $margin-5;
+    margin-bottom: $margin-small;
+  }
+  .tab-nav {
+    margin-bottom: $margin-small;
+  }
+  .tab-content {
+    p {
+      font-weight: $font-weight-regular;
+    }
+  }
+
+  kbd {
+    padding: .1em .3em;
+    color: #ffffff;
+    background-color: $color-secondary;
+  }
+
+
+}

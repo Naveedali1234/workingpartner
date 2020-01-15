@@ -1,0 +1,27 @@
+.an-clients-list {
+  position: relative;
+  width: 100%;
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-between);
+  @include flex-wrap(wrap);
+
+  @media (max-width: $screen-xs) {
+    flex-direction: column;
+  }
+
+  a {
+    padding: 0 $padding-base;
+    margin-bottom: $margin-medium;
+    opacity: .6;
+
+    @media (max-width: $screen-xs) {
+      margin-bottom: $margin-medium * 2;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+

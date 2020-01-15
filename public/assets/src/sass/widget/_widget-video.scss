@@ -1,0 +1,41 @@
+.an-widget-video {
+  position: relative;
+  width: 100%;
+  padding: 0 $padding-medium;
+}
+.video-single {
+  position: relative;
+  margin-bottom: $margin-large;
+  .image {
+    position: relative;
+    img {
+      border-radius: $border-radius;
+      width: 100%;
+    }
+    .duration {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      padding: 2px $padding-medium;
+      background: $color-secondary;
+      color: $font-color-white;
+      display: inline;
+      border-radius: $border-radius;
+      margin: 0;
+    }
+  }
+  h3 {
+    margin: 0;
+    padding-top: $padding-medium;
+    a {
+      color: $font-color-base;
+      font-weight: $font-weight-regular;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+  .listing-meta {
+    padding-top: 0;
+  }
+}

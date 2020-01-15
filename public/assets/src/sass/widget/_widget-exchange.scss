@@ -1,0 +1,86 @@
+.an-exchange {
+  position: relative;
+  width: 100%;
+  margin-bottom: $margin-base * 3;
+  .timezone {
+    padding: $padding-base * 2 $padding-base * 2;
+    background: $color-accents;
+    color: $font-color-white;
+    @include flex-space-between();
+
+    h4 {
+      margin: 0;
+      color: $font-color-white;
+      font-size: $font-size-h4 + 4;
+      font-weight: $font-weight-regular;
+      font-family: $font-family-primary;
+    }
+
+    .time {
+      font-size: $font-size-h1;
+      font-weight: $font-weight-regular;
+      margin: 0;
+      span {
+        position: relative;
+        top: -8px;
+        font-size: $font-size-base - 2;
+        padding-left: $padding-5;
+      }
+    }
+  }
+
+
+  .exchange-rate {
+    position: relative;
+    padding: $padding-base * 3 $padding-base * 2;
+    background: $color-secondary;
+    color: $font-color-white;
+
+    > h4 {
+      @extend .text-uppercase;
+      @include flex-space-between();
+      color: $font-color-lighter;
+      margin: 0;
+      padding-bottom: $padding-base;
+
+      a {
+        font-size: $font-size-h3;
+      }
+    }
+  }
+  .exchange-single {
+    position: relative;
+    padding: $padding-medium 0 0;
+    @include flex-space-between();
+    h4 {
+      margin: 0;
+      img {
+        width: 20px;
+        position: relative;
+        top: -2px;
+        margin-right: $margin-small - 4;
+      }
+      span {
+        font-size: $font-size-h3 - 4;
+        color: $font-color-white;
+      }
+      small {
+        display: block;
+        font-size: $font-size-base - 3;
+        color: $font-color-lighter;
+      }
+    }
+    .rate {
+      font-size: $font-size-h1;
+      font-weight: $font-weight-regular;
+      margin: 0;
+      opacity: .9;
+      span {
+        position: relative;
+        top: -8px;
+        font-size: $font-size-base - 2;
+        padding-right: $padding-5;
+      }
+    }
+  }
+}

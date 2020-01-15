@@ -1,0 +1,34 @@
+.an-premium-listing  {
+  .owl-pagination {
+    display: none;
+  }
+  .owl-nav {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    margin: 0 auto;
+
+    .owl-next,
+    .owl-prev {
+      position: absolute;
+      font-family: "Ionicons";
+      opacity: 1;
+      padding: 0;
+      @include transition;
+      @include circle-icon-link-white;
+
+      &:hover {
+        background: $color-primary;
+        border-color: $color-primary;
+        color: $font-color-white;
+      }
+    }
+    .owl-next {
+      right: 0;
+    }
+
+    .owl-prev {
+      right: 50px;
+    }
+  }
+}

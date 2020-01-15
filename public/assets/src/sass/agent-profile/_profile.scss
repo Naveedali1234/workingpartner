@@ -1,0 +1,24 @@
+.an-agent-about {
+  position: relative;
+  padding-bottom: $padding-base * 2;
+
+  p {
+    font-size: $font-size-base + 1;
+  }
+
+}
+.page-title {
+  margin: 0;
+  padding-bottom: $padding-large;
+}
+
+.an-quote {
+  position: relative;
+  font-size: $font-size-base + 3;
+  color: $font-color-base;
+  padding-left: $padding-base * 2;
+  border-left: 3px solid $color-primary;
+  font-family: $font-family-quote;
+  font-weight: $font-weight-regular;
+  margin: $margin-base 0;
+}

@@ -1,0 +1,74 @@
+.an-map-marker {
+  position: relative;
+  background: $color-content-bg-white;
+  padding: $padding-medium;
+  margin-top: $margin-small;
+  margin-right: $margin-small;
+  @include display(flex);
+  @include border-radius($border-radius);
+
+  &:before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: $color-content-bg-white;
+    @include an-box-shadow();
+  }
+
+  .image {
+    width: 130px;
+    position: relative;
+    margin-right: $margin-medium;
+
+    img {
+      width: 100%;
+      @include border-radius($border-radius);
+    }
+  }
+
+  h2 {
+    margin: 0;
+    padding-bottom: $padding-5;
+
+    @media (max-width: $screen-xs) {
+      font-size: $font-size-h3;
+    }
+  }
+
+  p {
+    &.price {
+      color: $color-primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+  .listing-meta {
+    font-weight: $font-weight-regular;
+    font-size: $font-size-small;
+
+    span {
+      max-width: 200px;
+    }
+  }
+}
+
+
+
+/* white background and box outline */
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div
+{
+    /* we have to use !important because we are overwritng inline styles */
+    background-color: transparent !important;
+    box-shadow: none !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.gm-style-iw
+{
+    top: 22px !important;
+    left: 22px !important;
+}

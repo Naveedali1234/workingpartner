@@ -1,0 +1,54 @@
+.listing-meta {
+  position: relative;
+  padding-top: $padding-small - 5;
+  margin: 0;
+  font-size: $font-size-small + 2;
+  color: lighten($font-color-light, 10%);
+  @include transition();
+  //@include text-overflow();
+
+  span {
+    font-weight: $font-weight-medium;
+    a {
+
+      font-weight: $font-weight-medium;
+      color: $font-color-extra-light;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    margin-right: $padding-base;
+    i {
+      padding-right: $padding-small - 5;
+      font-size: $font-size-base;
+    }
+    [class^="ion"] {
+      font-size: $font-size-base - 3;
+    }
+
+    &.meta-italic {
+      font-family: $font-family-quote;
+      font-style: italic;
+      margin-right: 5px;
+      font-weight: $font-weight-bold;
+    }
+
+    &.user {
+      a {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.an-top-meta {
+  padding-bottom: $padding-small;
+  @include display(inline-block);
+  width: 100%;
+
+  .price {
+    float: right;
+    color: $color-primary;
+    font-weight: $font-weight-semibold;
+  }
+}

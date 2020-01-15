@@ -1,0 +1,17 @@
+.an-badge {
+  position: relative;
+  font-family: $font-family-secondary;
+  font-size: $font-size-small - 2;
+  padding: 2px $padding-small;
+  color: $font-color-white;
+  font-weight: $font-weight-semibold;
+  @include border-radius($btn-border-radius);
+  @extend .text-uppercase;
+  @include transition();
+
+  &.default {
+    background: $color-content-bg;
+    color: $font-color-light;
+    font-weight: $font-weight-semibold;
+  }
+}

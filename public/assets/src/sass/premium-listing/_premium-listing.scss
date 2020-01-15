@@ -1,0 +1,35 @@
+.an-premium-listing {
+  position: relative;
+  padding: $padding-base * 3 $padding-medium;
+  background: $color-secondary;
+  border-top: 2px solid $color-accents;
+
+  .an-title-container {
+    padding-bottom: $padding-large;
+  }
+
+  &.slider {
+    .an-listing-single {
+      margin-bottom: $margin-small;
+      .listing-name {
+        i {
+          background: darken($color-secondary, 10%);
+        }
+
+        h3 {
+          a {
+            color : $font-color-extra-light;
+          }
+        }
+      }
+      &:hover {
+        .listing-name {
+          i {
+            background: $color-primary;
+          }
+        }
+      }
+
+    }
+  }
+}

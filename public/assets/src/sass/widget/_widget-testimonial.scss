@@ -1,0 +1,54 @@
+.an-testimonial {
+  position: relative;
+  width: 100%;
+  padding-top: $padding-base;
+  margin-bottom: $margin-large;
+  @extend .text-center;
+
+  .image {
+    @include border-radius(50%);
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    margin-bottom: $margin-base;
+  }
+  .accents {
+    color: $color-accents;
+    font-family: $font-family-quote;
+    margin: 0;
+    font-weight: $font-weight-regular;
+    padding-bottom: $padding-small;
+  }
+  a {
+    font-size: $font-size-h2 + 2;
+    color: $font-color-base;
+    font-family: $font-family-secondary;
+  }
+  .testimonial-text {
+    margin: 0 auto;
+    max-width: 768px;
+    font-family: $font-family-quote;
+    padding: $padding-base;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base + 1;
+  }
+
+   i {
+    display: block;
+    padding: $padding-medium 0 0;
+    font-size: $font-size-h3;
+    color: $color-primary;
+  }
+
+  .owl-theme .owl-dots .owl-dot {
+    &.active {
+      span {
+        background: $color-accents;
+      }
+    }
+    span {
+      margin: 4px;
+      background: $font-color-base;
+    }
+  }
+}

@@ -1,0 +1,206 @@
+/*
+=============================================
+Table of content
+
+1. Scaffolding
+2. Typography
+3. Forms
+4. Buttons
+5. General style
+6. Utility classes
+7. Header
+8. Footer
+9. Pagination
+10. Listing
+11. Category
+12. News
+13. Badge
+14. Advertise
+15. Locations
+16. Search
+17. Banner
+18. Premium listing
+19. Title
+20. Sidebar
+21. Widget
+22. Agency
+23. Tab style
+24. Accordion
+25. Sidebar search
+26. Checkbox
+27. Page listing
+28. Profile
+29. Blog
+30. Comment
+31. Register
+32. Contact
+33. Pricing
+34. elements
+35. Map marker
+36. loader
+
+=======================================
+ */
+// @import bootstrap
+@import './vendors/bootstrap/variables';
+@import './vendors/bootstrap/mixins';
+
+// @import mixins and custom variables files
+@import './mixins/mixins';
+@import 'variables';
+
+
+
+
+//  @import base  file for project initialization
+//   Scafolding
+//   typography
+//   forms
+
+@import 'base/scaffolding';
+@import 'base/typography';
+@import 'base/forms';
+@import 'base/main-wrapper';
+@import 'base/buttons';
+@import 'base/custom-select';
+@import 'base/page-content';
+
+// Utility classes
+@import 'utility/utility-class';
+
+
+// Header
+@import 'header/header';
+@import 'header/navbar';
+@import 'header/navbar-mobile';
+
+
+// Footer
+@import 'footer/footer';
+@import 'footer/footer-top';
+@import 'footer/social-icons';
+@import 'footer/footer-bottom';
+
+// Pagination
+@import 'pagination/pagination';
+
+// Listing
+@import 'listing/listing';
+@import 'listing/listing-img-container';
+@import 'meta/meta';
+@import 'listing/listing-single';
+
+// Category
+@import 'category/category';
+
+// News
+@import 'news/news';
+
+// Badge
+@import 'badge/badge';
+
+// Advertiae
+@import 'advertise/advertise';
+
+
+// Location
+@import 'location/location';
+
+
+// Search
+@import 'search/search';
+@import './search/search-fields';
+@import './search/search-btn';
+@import './search/search-range';
+@import './search/location-search';
+@import './search/datepicker';
+
+
+
+// Header banner
+@import 'header-banner/banner';
+@import 'header-banner/map';
+@import 'header-banner/slider';
+
+// Premium listing
+@import './premium-listing/premium-listing';
+@import './premium-listing/listing-slider';
+
+// title
+@import './title/title';
+
+// Section container
+@import './section-container/section-container';
+
+// Sidebar
+@import './sidebar/sidebar';
+
+
+// widgets
+@import './widget/widget-exchange';
+@import './widget/tags';
+@import './widget/widget-video';
+@import './widget/widget-testimonial';
+@import './widget/widget-contact-info';
+@import './widget/widget-author';
+@import './widget/widget-opening-hour';
+
+// Agency
+@import './agency/agency';
+
+// Tab style
+@import './tab/tabstyle';
+
+// Accordion style
+@import './accordion/accordion';
+
+// Sidebar-search
+@import './sidebar-search/sidebar-serach';
+
+// checkbox
+@import './checkbox/checkbox';
+
+// Page listing
+@import './page-listing/page-listing';
+
+// Agent profile
+@import './agent-profile/profile';
+@import './agent-profile/edit-profile';
+
+
+// bloog
+@import './blog/blog';
+@import './blog/blog-post';
+
+// comment
+@import './comments/comment';
+
+// Register
+@import './register/register';
+
+// contact
+@import './contact/contact';
+
+// Pricing
+@import './pricing/pricing';
+
+// Elements
+@import './elements/elements';
+
+// Marker
+@import './marker/map-marker';
+
+// Loader
+@import './loader/loader';
+
+// Demo
+@import './demo/demo';
+
+// Classified
+@import './classified/classified';
+
+// Partners
+@import './partners/partners';
+
+// How it  works
+@import './how-works/work';

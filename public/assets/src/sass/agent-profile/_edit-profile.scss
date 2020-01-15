@@ -1,0 +1,44 @@
+.an-edit-profile {
+  position: relative;
+  .an-save-btn {
+    position: relative;
+    text-align: center;
+    padding-top: $padding-large * 2;
+  }
+
+  input {
+    margin-bottom: $margin-large;
+  }
+  form {
+    p {
+      margin-bottom: $margin-5;
+      font-size: $font-size-h3;
+    }
+  }
+  .file-input {
+    .file-actions,
+    .file-thumbnail-footer{
+      display: none;
+    }
+    .form-control,
+    .file-caption{
+      @extend .an-form-control;
+      @extend .bottom-border;
+      box-shadow: none;
+    }
+    /* .btn {
+     *   @extend .an-btn;
+     * } */
+
+    .btn-primary {
+
+      @extend .an-btn;
+      @extend .an-btn-default;
+    }
+
+  }
+}
+
+#kvFileinputModal {
+  display: none;
+}

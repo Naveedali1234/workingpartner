@@ -1,0 +1,90 @@
+.an-header {
+  position: relative;
+  width: 100%;
+  @include transition();
+
+
+  .navbar-default {
+    @include border-radius(0);
+    background: transparent;
+    @include border-bottom($color-content-bg);
+    &.home-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99;
+      border-bottom: 0;
+      .navbar-nav {
+        @media (max-width: $screen-menu-breakpoint) {
+          background: $color-content-bg-white;
+        }
+
+        .dropdown-menu li a {
+          display: block;
+          width: 100%;
+
+        }
+      }
+
+      .navbar-nav > li > a {
+        color: $font-color-white;
+        @media (max-width: $screen-md) {
+          color: $font-color-base;
+        }
+      }
+    }
+
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    @include transition();
+
+    .navbar-default {
+      @include an-box-shadow();
+      animation: fadeIn .7s;
+      background: $color-content-bg-white;
+    }
+
+    .navbar-brand.sticky {
+      display: block;
+    }
+
+    .home-nav {
+      .default {
+        display: none;
+      }
+    }
+
+
+
+
+    .navbar-default .navbar-nav > li {
+      &.active {
+        > a {
+          color: $color-primary;
+        }
+      }
+    }
+
+    .navbar-default .navbar-nav > li > a {
+      color: $font-color-base;
+      @media (max-width: $screen-menu-breakpoint ) {
+        padding-top: $padding-small;
+        padding-bottom: $padding-small;
+
+      }
+    }
+  }
+}
+
+
+@keyframes fadeIn {
+  0%   { opacity: 0; top: -30px; }
+  100% { opacity: 1; top: 0;}
+}

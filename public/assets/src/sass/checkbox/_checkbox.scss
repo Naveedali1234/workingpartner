@@ -1,0 +1,71 @@
+.an-custom-checkbox {
+  position: relative;
+  width: 100%;
+  display: block;
+
+  &.dark-text {
+    label {
+      color: $font-color-base;
+      font-weight: $font-weight-regular;
+    }
+
+    input[type="checkbox"]:checked + label{
+      color: $font-color-base;
+    }
+
+    &.radio {
+      input[type="radio"]:checked + label {
+        color: $font-color-base;
+      }
+    }
+  }
+
+  &.radio {
+    label {
+      &:before {
+        content: "\f3a6";
+      }
+    }
+    input[type="radio"]:checked + label {
+      &:before {
+        content: "\f21b";
+      }
+    }
+  }
+
+  input {
+    display: none;
+  }
+  label {
+    position: relative;
+    cursor: pointer;
+    padding-left: $padding-medium + 5;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-base;
+    color: $font-color-extra-light;
+    @include flex-space-between;
+    @include transition();
+
+    &:before {
+      content: "\f372";
+      font-family: "Ionicons";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: $padding-base;
+      color: $font-color-light;
+      font-size: $font-size-base + 2;
+    }
+  }
+
+  input[type="checkbox"]:checked + label,
+  input[type="radio"]:checked + label {
+    color: $font-color-white;
+    &:before {
+      content: "\f371";
+      font-family: "Ionicons";
+      color: $color-primary;
+    }
+  }
+}
+

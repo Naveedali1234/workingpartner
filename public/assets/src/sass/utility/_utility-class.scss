@@ -1,0 +1,45 @@
+// Different cateogry classes
+.color-property   { color: $color-category-properties; }
+.color-motor      { color: $color-category-motors; }
+.color-pet        { color: $color-category-pets; }
+.color-service    { color: $color-category-services; }
+.color-job        { color: $color-category-jobs; }
+.color-hotel      { color: $color-category-hotels; }
+.color-sale       { color: $color-category-sales; }
+.color-restaurant { color: $color-category-restaurants; }
+
+.color-primary { color: $color-primary; }
+.color-accents { color: $color-accents; }
+
+
+.bg-property   { background: $color-category-properties; }
+.bg-motor      { background: $color-category-motors; }
+.bg-pet        { background: $color-category-pets; }
+.bg-service    { background: $color-category-services; }
+.bg-job        { background: $color-category-jobs; }
+.bg-hotel      { background: $color-category-hotels; }
+.bg-sale       { background: $color-category-sales; }
+.bg-restaurant { background: $color-category-restaurants; }
+
+.bg-primary { background: $color-primary; }
+.bg-accents { background: $color-accents; }
+
+
+.p80 { padding: 80px 0;}
+
+.pt60 { padding-top: 60px; }
+.pb10 { padding-bottom: 10px; }
+.pt15 { padding-top: 15px !important; }
+.pb30 { padding-bottom: 30px !important; }
+.pb15 { padding-bottom: 15px !important; }
+.pb40 { padding-bottom: 40px; }
+
+.no-margin {margin: 0 !important;}
+.no-padding {padding: 0 !important;}
+
+.pt0 { padding-top: 0 !important;}
+.pb0 { padding-bottom: 0 !important;}
+
+
+.mt60 { margin-top: 60px; }
+.mt115 { margin-top: 105px; }
